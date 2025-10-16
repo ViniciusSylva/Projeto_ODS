@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*
+:root {
+  --cor-principal: #007bff;
+  --cor-secundaria: #6c757d;
+  --cor-fundo: #ffffff;
+  --cor-texto: #333333;
+}
+*/
+
+/* adding e bordas sejam incluídos dentro do tamanho do elemento, facilita muito o layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth; /* rolagem suave */
+}
+
+/* Define uma fonte padrão e cores que vão ser usadas em todo o site */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Evita que imagens “estourem” o layout: */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#cabecalho {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
