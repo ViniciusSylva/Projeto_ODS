@@ -1,15 +1,16 @@
 @charset "UTF-8";
 
-/*
+/* Cores globais*/
 :root {
-  --cor-principal: #007bff;
-  --cor-secundaria: #6c757d;
-  --cor-fundo: #ffffff;
-  --cor-texto: #333333;
+  --cor_primaria: #2E7D32;
+  --cor_secundaria: #FFB300;
+  --cor_fundo: #F2F4F3;
+  --cor_texto: #333333;
+  --cor_alerta: #F57C00;
+  --cor_detalhes: #A5D6A7;
 }
-*/
 
-/* adding e bordas sejam incluídos dentro do tamanho do elemento, facilita muito o layout */
+/* Faz com que padding e bordas sejam incluídos dentro do tamanho do elemento, facilita muito o layout */
 * {
   margin: 0;
   padding: 0;
@@ -24,8 +25,8 @@ html {
 /* Define uma fonte padrão e cores que vão ser usadas em todo o site */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--cor_fundo);
+  color: var(--cor_texto);
   line-height: 1.5;
 }
 
