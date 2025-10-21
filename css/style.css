@@ -37,8 +37,36 @@ img, video {
   display: block;
 }
 
-#cabecalho {
-    height: 100px;
-    width: 100px;
-    background-color: black;
+header#cabecalho {
+  height: 75px;
+  width: 1903px;
+  background-color: rgb(255, 255, 255);
+}
+
+main#conteudo_principal > img {
+  width: 1903px;
+  height: 900px;
+  display: block;
+}
+
+nav#blocos_de_conteudo > h2 {
+  color: red;
+  text-align: center;
+  padding: 75px;
+}
+
+
+
+
+
+footer#rodape {
+  background-color: #FFB300;
+  width: 100%;
+  height: 55px;
+}
+
+footer#rodape > p {
+  text-align: center;
+  font-size: 20px;
+  color: #F2F4F3;
 }
