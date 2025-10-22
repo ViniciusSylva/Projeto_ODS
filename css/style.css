@@ -14,7 +14,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* padding e a border passam a ser incluidos dentro da largura e da altura  */
 }
 
 html {
@@ -34,30 +34,80 @@ body {
 img, video {
   max-width: 100%;
   height: auto;
-  display: block;
+  display: block; /* Faz com que ocupe a largura máxima da sua "Caixa pai" */
 }
 
-header#cabecalho {
+#cabecalho {
   height: 75px;
-  width: 1903px;
+  width: 100%;
   background-color: rgb(255, 255, 255);
 }
 
-main#conteudo_principal > img {
-  width: 1903px;
-  height: 900px;
-  display: block;
+#conteudo_principal {
+  position: relative; /* permite posicionar elementos sobre ela, no nosso caso, textos sobre a imagem */
+  width: 100%;
+  overflow: hidden; /* Valor "hidden" faz com que todo o conteúdo que ultrapasse a largura ou a altura seja cortado */
 }
 
-nav#blocos_de_conteudo > h2 {
+#conteudo_principal img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative; /* Usado para mover o elemento*/
+  z-index: 0; /* "z-index" controla a sobreposição dos elementos, no nosso caso para a imagem ficar no fundo */
+}
+
+#textos_na_foto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+#textos_na_foto h1,
+#textos_na_foto h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#textos_na_foto button {
+  background-color: #00bfff;
+  color: white;
+  border: none; /* remove a borda */
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.titulo_solto {
   color: red;
   text-align: center;
-  padding: 75px;
+  padding: 40px;
 }
 
+#bloco_de_links {
 
+}
 
+.link_imagem {
 
+}
+
+.link_imagem img {
+
+}
+
+.link_imagem span {
+
+}
+
+.link_imagem:hover img {
+  
+}
 
 footer#rodape {
   background-color: #FFB300;
@@ -65,7 +115,7 @@ footer#rodape {
   height: 55px;
 }
 
-footer#rodape > p {
+footer#rodape p {
   text-align: center;
   font-size: 20px;
   color: #F2F4F3;
