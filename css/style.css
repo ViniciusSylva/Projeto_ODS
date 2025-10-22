@@ -38,9 +38,7 @@ img, video {
 }
 
 #cabecalho {
-  height: 75px;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
+  
 }
 
 #conteudo_principal {
@@ -109,6 +107,24 @@ img, video {
   
 }
 
+.container {
+  display: flex; /*Coloca lado a lado*/
+  justify-content: space-between; /*Espaço entre eles*/
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bloco_do_texto {
+  
+}
+
+.imagem_do_texto {
+
+}
+
 footer#rodape {
   background-color: #FFB300;
   width: 100%;
@@ -120,3 +136,4 @@ footer#rodape p {
   font-size: 20px;
   color: #F2F4F3;
 }
+
