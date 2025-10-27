@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-query.css">
     <link rel="shortcut icon" href="img/simbolo-site-ico.ico" type="image/x-icon">
     <title>PROJETO ODS</title>
 </head>
 <body>
+    <div id="topo"></div>
+
     <header id="cabecalho">
         <div class="logo_e_texto">
-            <img src="img/simbolo-site.png" alt="Logo">
+            <img src="img/simbolo-site.png" alt="Logo do site">
             <h1>CERRESKI</h1>
         </div>
 
-        <nav>
-            <a href="#cabecalho" class="link_escrita">Início</a>
+        <nav class="navegacao_pagina">
+            <a href="#topo" class="link_escrita">Início</a>
             <a href="#rodape" class="link_escrita">Sobre</a>
             <a href="#rodape" class="link_escrita">Contato</a>
         </nav>
@@ -24,40 +27,40 @@
     <main id="conteudo_principal">
         <img src="img/image-tela-principal.png" alt="Primeira imagem de fundo">
 
-        <div id="textos_na_foto">
+        <div id="itens_conteudo_principal">
             <h1>TÍTULO PRINCIPAL</h1>
             <h2>TEXTO ABIXO DO TÍTULO</h2>
             <button>BOTÃO DA PRIMEIRA TELA</button>
         </div>
     </main>
     
-    <div class="titulo_solto">
-        <h2>CONTEUDOS AQUI</h2>
+    <div>
+        <h2 class="titulo_com_linha">CONTEUDOS AQUI</h2>
     </div>
 
     <nav id="blocos_de_links">
-        <a href="" class="link_imagem">
-            <img src="" alt="">
-            <span></span> <!-- Uso do "span" pq ele é inline e pode ser centralizado exatamente na imagem, ele pode ser posicionado, estilizado e etc.. sem quebrar nada -->  
+        <a href="link1.html" class="link_imagem" target="_blank">
+            <img src="img/imagem-tela-1.jpg" alt="">
+            <span>TESTE !</span> <!-- Uso do "span" pq ele é inline e pode ser centralizado exatamente na imagem, ele pode ser posicionado, estilizado e etc.. sem quebrar nada -->  
         </a>
 
-        <a href="" class="link_imagem">
-            <img src="" alt="">
-            <span></span>
+        <a href="link2.html" class="link_imagem" target="_blank">
+            <img src="img/imagem-tela-2.jpg" alt="">
+            <span>TESTE !!</span>
         </a>
 
-        <a href="" class="link_imagem">
-            <img src="" alt="">
-            <span></span>
+        <a href="link3.html" class="link_imagem" target="_blank">
+            <img src="img/imagem-tela-3.jpg" alt="">
+            <span>TESTE !!!</span>
         </a>
             
-        <a href="" class="link_imagem">
-            <img src="" alt="">
-            <span></span>
+        <a href="link4.html" class="link_imagem" tar>
+            <img src="img/imagem-tela-4.jpg" alt="">
+            <span>TESTE !!!!</span>
         </a>
     </nav>
 
-    <article class="container">
+    <article class="artigo">
         <div class="bloco_do_texto">
             <h2>TÍTULO DO TEXTO</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis officia mollitia possimus nisi, dicta culpa aspernatur et totam itaque odio voluptas, consequatur corporis a libero perspiciatis dolore eaque animi vitae.</p>
