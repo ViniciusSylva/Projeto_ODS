@@ -196,22 +196,23 @@ main {
 
 #blocos_de_links {
  display: flex;  /* Faz os links ficarem lado a lado */
- justify-content: space-between;  /* Espaço entre eles */
+ justify-content: space-between;  /* forma em que eles são divididos  */
  flex-wrap: wrap; /* Permite quebra em telas menores */
- gap: 10px;
  padding: 20px;
 }
 
 #blocos_de_links .link_imagem {
   position: relative;
-  flex: 1 1 calc(25% - 10px); /* Cada link ocupa 25% menos o gap */
+  max-width: 200px;
+  flex: 1 1 150px;
   overflow: hidden;
   border-radius: 10px;
 }
 
 #blocos_de_links .link_imagem img {
   width: 100%;  /* Imagem ocupa 100% do link */
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
   display: block;
   transition: transform 0.3s ease;
@@ -238,7 +239,7 @@ main {
 
 .artigo {
   display: flex; /*Coloca lado a lado*/
-  justify-content: space-between; /*Espaço entre eles*/
+  justify-content: space-between; /* Forma com que eles são divididos */
   align-items: center;
   background-color: white;
   padding: 20px;
