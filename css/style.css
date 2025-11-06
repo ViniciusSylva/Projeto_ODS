@@ -101,10 +101,6 @@ img, video {
   padding-left: 20px;
 }
 
-main {
-  padding-top: var(--altura-cabecalho); /* Adiciona espaço interno acima do conteudo, nesse caso, 80px acima da imagem do main */
-}
-
 .link_escrita {
   background-color: rgb(89, 89, 233);
   color: black;
@@ -258,18 +254,29 @@ main {
 }
 
 #calculos {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+#calculos .container_calculos { 
+  width: 850px;
   height: 850px;
-  width: 100%;
-  background-color: orangered;
+  background-color: rgb(228, 137, 103);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #foto_parallax {
-  height: 650px;
+  height: 635px;
   background-image: url("../img/imagem-tela-final.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
+  z-index: -1;
+  position: relative;
 }
 
 #contato {
@@ -281,7 +288,7 @@ main {
 #rodape {
   background-color: rgb(89, 89, 233);
   width: 100%;
-  height: 200px;
+  height: 150px;
   padding: 20px;
   text-align: center;
   scroll-margin-top: 12px;
@@ -296,13 +303,34 @@ main {
 }
 
 #rodape .logo img {
-  width: 35px;
-  height: auto;
+  width: 32px;
+  height: 32px;
+  object-fit: cover; /* mantém proporção sem cortar */
+  border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
 #rodape .logo img:hover {
   transform: scale(1.1);
+}
+
+#rodape p a{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+#rodape p a:link,
+#rodape p a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#rodape p a:hover {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #rodape p {
