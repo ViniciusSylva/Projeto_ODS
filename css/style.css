@@ -239,33 +239,39 @@ img, video {
   display: flex; /*Coloca lado a lado*/
   justify-content: space-between; /* Forma com que eles são divididos */
   align-items: center;
-  background-color: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .bloco_do_texto {
-  
+    height: 90%;
+    width: 90%; /* Preenche quase todo o main */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra elegante */
 }
 
-.imagem_do_texto {
-
+img.imagem_do_texto {
+  height: 50%;
+  width: 50%;
 }
 
 #calculos {
-  display: flex;
-  justify-content: center;
-  padding: 40px;
+    min-height: 80vh; /* O main ocupa 80% da altura da tela */
+    display: flex; /* Centraliza o bloco */
+    justify-content: center; /* no eixo X */
+    align-items: center; /* no eixo Y */
+    padding: 20px;
+    background-color: #f5f5f5; /* Só pra destacar a área */
 }
 
-#calculos .container_calculos { 
-  width: 850px;
-  height: 850px;
-  background-color: rgb(228, 137, 103);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+.container_calculos { 
+    height: 90%;
+    width: 90%; /* Preenche quase todo o main */
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra elegante */
 }
 
 #foto_parallax {
