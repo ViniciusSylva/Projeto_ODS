@@ -173,8 +173,8 @@ img, video {
   font-weight: 700;
   font-size: 24px;
   color: black;
-  margin-top: 100px;
-  margin-bottom: 40px;
+  margin-top: 120px;
+  margin-bottom: 68px;
 }
 
 .titulo_com_linha::before {
@@ -235,24 +235,45 @@ img, video {
   box-sizing: border-box;
 }
 
-.artigo {
-  display: flex; /*Coloca lado a lado*/
-  justify-content: space-between; /* Forma com que eles são divididos */
-  align-items: center;
-}
-
 .bloco_do_texto {
-    height: 90%;
-    width: 90%; /* Preenche quase todo o main */
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra elegante */
+  display: flex; /*Coloca lado a lado*/
+  align-items: center;
+  gap: 20px;
+  padding: 280px 250px 280px 20px;
+}
+.bloco_do_texto .texto {
+  flex: 2;  /* Maior que a imagem */
+  padding: 0px 350px 0px 200px ;
 }
 
-img.imagem_do_texto {
-  height: 50%;
-  width: 50%;
+.texto h2 {
+  font-weight: 700;
+  font-size: 2.5em;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.texto p {
+  font-size: 1.5em;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.texto span {
+  color: blue;
+  font-weight: bold;
+}
+
+.bloco_do_texto .imagem_do_texto {
+  flex: 1;
+  max-width: 375px;
+}
+
+.bloco_do_texto .imagem_do_texto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
 #calculos {
@@ -261,7 +282,7 @@ img.imagem_do_texto {
     justify-content: center; /* no eixo X */
     align-items: center; /* no eixo Y */
     padding: 20px;
-    background-color: #f5f5f5; /* Só pra destacar a área */
+    background-color: #524646; /* Só pra destacar a área */
 }
 
 .container_calculos { 
