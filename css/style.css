@@ -63,6 +63,7 @@ img, video {
   height: 60px;
   background-color: #e0e0e0;
   transition: all 0.3s ease; /* Usadad para criar animações suaves quando algum valor do CSS muda. Usa propriedades "Do que muda" "Do tempo que leva" "E a velocidade do movimento" */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #cabecalho.shrink .logo_e_texto img {
@@ -175,6 +176,7 @@ img, video {
   color: black;
   margin-top: 120px;
   margin-bottom: 68px;
+  background-color: var(--cor_fundo);
 }
 
 .titulo_com_linha::before {
@@ -309,7 +311,7 @@ img, video {
 #contato {
   height: 450px;
   width: 100%;
-  background-color: white;
+  background-color: var(--cor_fundo);
 }
 
 #rodape {
