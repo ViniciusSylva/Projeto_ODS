@@ -2,11 +2,10 @@
 
 /* Cores globais*/
 :root {
-  --cor_primaria: #2E7D32;
-  --cor_secundaria: #FFB300;
+  --cor_primaria: rgb(22, 102, 182);
+  --cor_secundaria: rgb(0, 23, 155);
   --cor_fundo: #F2F4F3;
   --cor_texto: #333333;
-  --cor_alerta: #F57C00;
   --cor_detalhes: #A5D6A7;
 }
 
@@ -55,15 +54,19 @@ img, video {
   justify-content: space-between;
   align-items: center;
   background-color: var(--cor_fundo);
-  color: white;
   z-index: 1000;  /* Serve para organizar os itens para traz e para frente, quanto maior mas a frente */
+}
+
+#cabecalho h1 {
+  font-size: 2.2em;
+  color: var(--cor_secundaria);
 }
 
 #cabecalho.shrink {
   height: 60px;
-  background-color: #e0e0e0;
+  background-color: var(--cor_fundo);
   transition: all 0.3s ease; /* Usadad para criar animações suaves quando algum valor do CSS muda. Usa propriedades "Do que muda" "Do tempo que leva" "E a velocidade do movimento" */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #cabecalho.shrink .logo_e_texto img {
@@ -92,7 +95,7 @@ img, video {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: blue;
+  color: var(--cor_primaria);
 }
 
 .logo_e_texto img {
@@ -103,7 +106,7 @@ img, video {
 }
 
 .link_escrita {
-  background-color: rgb(89, 89, 233);
+  background-color: var(--cor_primaria);
   color: black;
   font-weight: 600;  /* Grossura da escrita */
   font-size: 17;
@@ -118,12 +121,13 @@ img, video {
 .link_escrita .escrita {
   display: block;
   height: 5px;
-  background-color: black;
 }
 
 .link_escrita:hover {
-  background-color: yellow;
-  color: black;
+  background-color: var(--cor_fundo);
+  color: var(--cor_secundaria);
+  border: 2px solid;
+  border-color: var(--cor_secundaria);
 }
 
 
@@ -159,7 +163,7 @@ img, video {
 }
 
 #itens_conteudo_principal button {
-  background-color: white;
+  background-color: var(--cor_fundo);
   color: rgb(0, 0, 0);
   border: none; /* remove a borda */
   padding: 16px 30px;
@@ -188,7 +192,7 @@ img, video {
   width: 60px;
   height: 4px;
   border-radius: 2px;
-  background-color: blue;
+  background-color: var(--cor_secundaria);
   display: block;
 }
 
@@ -262,7 +266,7 @@ img, video {
 }
 
 .texto span {
-  color: blue;
+  color: var(--cor_secundaria);
   font-weight: bold;
 }
 
@@ -290,7 +294,7 @@ img, video {
 .container_calculos { 
     height: 90%;
     width: 90%; /* Preenche quase todo o main */
-    background-color: white;
+    background-color: var(--cor_fundo);
     border: 2px solid #333;
     border-radius: 10px;
     padding: 30px;
@@ -299,23 +303,50 @@ img, video {
 
 #foto_parallax {
   height: 635px;
-  background-image: url("../img/imagem-tela-final.jpg");
+  background-image: url("../img/imagem-tela-final-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   background-attachment: fixed;
   z-index: -1;
   position: relative;
 }
 
 #contato {
-  height: 450px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--cor_fundo);
+  padding: 25px 20px 120px 20px;
+  border-radius: 10px;
+}
+
+.formulario input {
+  height: 5vh;
+  width: 86vw;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.formulario button {
+  background-color: #46a14b;
+  height: 5vh;
+  width: 86vw;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #rodape {
-  background-color: rgb(89, 89, 233);
+  background-color: var(--cor_secundaria);
   width: 100%;
   height: 150px;
   padding: 20px;
