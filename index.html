@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-query.css">
     <link rel="shortcut icon" href="img/simbolo-site-ico.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>PROJETO ODS</title>
 </head>
 <body>
@@ -19,12 +20,12 @@
 
         <nav class="navegacao_pagina">
             <a href="#topo" class="link_escrita">Início</a>
-            <a href="#rodape" class="link_escrita">Sobre</a>
-            <a href="#rodape" class="link_escrita">Contato</a>
+            <a href="#contato" class="link_escrita">Contato</a>
+            <a href="#calculos" class="link_escrita">Cálculos</a>
         </nav>
     </header>
     
-    <main id="conteudo_principal">
+    <main id="conteudo_principal" class="reveal">
         <img src="img/image-tela-principal.png" alt="Primeira imagem de fundo">
 
         <div id="itens_conteudo_principal">
@@ -34,11 +35,11 @@
         </div>
     </main>
     
-    <div>
+    <div class="reveal">
         <h2 class="titulo_com_linha">CONTEUDOS AQUI</h2>
     </div>
 
-    <nav id="blocos_de_links">
+    <nav id="blocos_de_links" class="reveal">
         <a href="link1.html" class="link_imagem" target="_blank">
             <img src="img/imagem-tela-1.jpg" alt="">
             <span>TESTE !</span> <!-- Uso do "span" pq ele é inline e pode ser centralizado exatamente na imagem, ele pode ser posicionado, estilizado e etc.. sem quebrar nada -->  
@@ -62,7 +63,7 @@
 
     <div id="artigo"></div>
 
-    <article class="bloco_do_texto">
+    <article id="bloco_do_texto" class="reveal">
         <div class="texto">
             <h2>TÍTULO DO TEXTO</h2>
             <p><span>Lorem ipsum</span>, dolor sit amet consectetur adipisicing elit. Facilis officia mollitia possimus nisi, dicta culpa aspernatur et totam itaque odio voluptas, consequatur corporis a libero perspiciatis dolore eaque animi vitae.</p>
@@ -75,7 +76,7 @@
         </div>
     </article>
 
-    <main id="calculos">
+    <main id="calculos" class="reveal">
         <div class="container_calculos">
 
         </div>
@@ -85,9 +86,11 @@
         
     </section>
 
-    <h2 class="titulo_com_linha">CONTATO</h2>
+    <div class="reveal">
+        <h2 class="titulo_com_linha">CONTATO</h2>
+    </div>
 
-    <section id="contato">
+    <section id="contato" class="reveal">
         <div class="formulario">
             <input type="text" id="nome" name="nome" placeholder="Nome">
             <br>
@@ -116,10 +119,10 @@
         </div>
 
         <p>
-            <a href="#topo">Ínicio</a> | 
-            <a href="#calculos">Jornada</a> | 
-            <a href="#artigo">Sobre</a> | 
-            <a href="#contato">Contato</a>
+            <a href="#topo">Ínicio </a> | 
+            <a href="#calculos"> Jornada </a> | 
+            <a href="#artigo"> Sobre </a> | 
+            <a href="#contato"> Contato </a>
         </p>
         <p>Criado por Vinicius Silva para projeto da faculdade</p>
     </footer>
