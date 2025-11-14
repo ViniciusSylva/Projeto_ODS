@@ -1,3 +1,5 @@
+// --- CABEÇALHO ACOMPANHA SCROLL ---
+
 window.addEventListener("scroll", function() {
     const cabecalho = this.document.getElementById("cabecalho");
 
@@ -34,3 +36,71 @@ window.addEventListener("scroll", revealOnScroll);
 // Executa uma vez ao carregar
 revealOnScroll();
 
+
+
+
+// --- ÁREA DE CALCULO DE CONSUMO ---
+
+  const aparelhos = [];
+
+  function adicionarAparelho() {
+    const nome = document.getElementById('nome').value;
+    const quantidade = parseFloat(document.getElementById('quantidade').value);
+    const consumo = parseFloat(document.getElementById('consumo').value);
+    const horas = parseFloat(document.getElementById('horas').value);
+
+    if (!nome || isNaN(quantidade) || isNaN(consumo) || isNaN(horas)) {
+      alert("Preencha todos os campos corretamente!");
+      return;
+    }
+
+    aparelhos.push({ nome, quantidade, consumo, horas });
+    atualizarTabela();
+
+    // limpa inputs
+    document.getElementById('nome').value = "";
+    document.getElementById('quantidade').value = "";
+    document.getElementById('consumo').value = "";
+    document.getElementById('horas').value = "";
+  }
+
+  function atualizarTabela() {
+    const corpo = document.querySelector("#tabela tbody");
+    corpo.innerHTML = "";
+
+    aparelhos.forEach(a => {
+      const linha = document.createElement("tr");
+      linha.innerHTML = `
+        <td>${a.nome}</td>
+        <td>${a.quantidade}</td>
+        <td>${a.consumo}</td>
+        <td>${a.horas}</td>
+        <td>-</td>
+      `;
+      corpo.appendChild(linha);
+    });
+  }
+
+  function calcularConsumo() {
+    const corpo = document.querySelector("#tabela tbody");
+    corpo.innerHTML = "";
+    let total = 0;
+
+    aparelhos.forEach(a => {
+      const consumoDiario = a.quantidade * a.consumo * a.horas;
+      total += consumoDiario;
+
+      const linha = document.createElement("tr");
+      linha.innerHTML = `
+        <td>${a.nome}</td>
+        <td>${a.quantidade}</td>
+        <td>${a.consumo}</td>
+        <td>${a.horas}</td>
+        <td>${consumoDiario.toFixed(2)} kWh</td>
+      `;
+      corpo.appendChild(linha);
+    });
+
+    document.getElementById("resultado").innerHTML =
+      `Consumo total diário: <strong>${total.toFixed(2)} kWh</strong>`;
+  }
