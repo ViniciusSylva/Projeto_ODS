@@ -31,7 +31,7 @@
         <div id="itens_conteudo_principal">
             <h1>Energia em números, impacto em consciência</h1>
             <h2>Saiba quanto cada aparelho consome e quanto CO₂ isso representa para o planeta</h2>
-            <button>Calcular meu consumo</button>
+            <a href="#calculos">Calcular meu consumo</a>
         </div>
     </main>
     
@@ -61,11 +61,9 @@
         </a>
     </nav>
 
-    <div id="artigo"></div>
-
     <article id="bloco_do_texto" class="reveal">
         <div class="texto">
-            <h2>O essencial sobre o CO₂</h2>
+            <h2 id="ancora">O essencial sobre o CO₂</h2>
             <p><span>O que é o CO₂</span> O dióxido de carbono (CO₂) é um gás natural presente na atmosfera. Ele é essencial para manter o calor do planeta, mas em excesso contribui para o aquecimento global.</p>
 
             <p><span>Como o CO₂ é formado</span> O CO₂ é liberado principalmente pela queima de combustíveis fósseis — como carvão, petróleo e gás natural — usados para gerar energia, mover veículos e em processos industriais.</p>
@@ -80,53 +78,47 @@
         </div>
     </article>
 
-    <h1>Calculadora de Consumo de Energia</h1>
-
-    <div class="layout">
-
-    <!-- ÁREA DA ESQUERDA -->
-    <div class="form-area">
-        <h2>Adicionar Aparelho</h2>
-
-        <label>Nome do aparelho:</label>
-        <input type="text" id="nome" placeholder="Ex: Geladeira">
-
-        <label>Quantidade:</label>
-        <input type="number" id="quantidade" placeholder="Ex: 2">
-
-        <label>Consumo por hora (kWh):</label>
-        <input type="number" id="consumo" placeholder="Ex: 0.2" step="0.01">
-
-        <label>Horas ligadas por dia:</label>
-        <input type="number" id="horas" placeholder="Ex: 8">
-
-        <button onclick="adicionarAparelho()">Adicionar</button>
+    <div class="borda_do_calculo">
+        <h1 id="calculos">Calculadora de Consumo de Energia</h1>
+        <div class="layout">
+            <!-- ÁREA DA ESQUERDA -->
+            <div class="form-area">
+                <h2>Adicionar Aparelho</h2>
+                <label>Nome do aparelho:</label>
+                <input type="text" id="nome" placeholder="Ex: Geladeira">
+                <label>Quantidade:</label>
+                <input type="number" id="quantidade" placeholder="Ex: 2">
+                <label>Consumo por hora (kWh):</label>
+                <input type="number" id="consumo" placeholder="Ex: 0.2" step="0.01">
+                <label>Horas ligadas por dia:</label>
+                <input type="number" id="horas" placeholder="Ex: 8">
+                <button onclick="adicionarAparelho()">Adicionar</button>
+            </div>
+            <!-- ÁREA DA DIREITA -->
+            <div class="table-area">
+                <h2>Aparelhos Inseridos</h2>
+                <table id="tabela">
+                <thead>
+                    <tr>
+                    <th>Aparelho</th>
+                    <th>Qtd</th>
+                    <th>kWh/h</th>
+                    <th>Horas/dia</th>
+                    <th>Consumo Diário</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                </table>
+                <button onclick="calcularConsumo()">Calcular Consumo</button>
+                <div id="resultado" class="total"></div>
+                <div id="co2" class="total"></div>
+            </div>
+        </div>
     </div>
 
+    <article class="dicas">
 
-    <!-- ÁREA DA DIREITA -->
-    <div class="table-area">
-        <h2>Aparelhos Inseridos</h2>
-
-        <table id="tabela">
-        <thead>
-            <tr>
-            <th>Aparelho</th>
-            <th>Qtd</th>
-            <th>kWh/h</th>
-            <th>Horas/dia</th>
-            <th>Consumo Diário</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-        </table>
-
-        <button onclick="calcularConsumo()">Calcular Consumo</button>
-        <div id="resultado" class="total"></div>
-    </div>
-
-    </div>
-
+    </article>
 
     <section id="foto_parallax">
         
@@ -167,7 +159,7 @@
         <p>
             <a href="#topo">Ínicio </a> | 
             <a href="#calculos"> Jornada </a> | 
-            <a href="#artigo"> Sobre </a> | 
+            <a href="#ancora"> Sobre </a> | 
             <a href="#contato"> Contato </a>
         </p>
         <p>Criado por Vinicius Silva para projeto da faculdade</p>

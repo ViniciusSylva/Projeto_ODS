@@ -6,7 +6,6 @@
   --cor_secundaria: rgb(27, 59, 202);
   --cor_fundo: #F2F4F3;
   --cor_texto: #333333;
-  --cor_detalhes: #A5D6A7;
 }
 
 /* Faz com que padding e bordas sejam incluídos dentro do tamanho do elemento, facilita muito o layout */
@@ -39,6 +38,8 @@ img, video {
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
+  text-align: center;
+  scroll-margin-top: 200px;
 }
 
 h2 {
@@ -186,14 +187,15 @@ p, body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-#itens_conteudo_principal button {
+#itens_conteudo_principal a {
   background-color: var(--cor_fundo);
   color: rgb(0, 0, 0);
   border: none; /* remove a borda */
   padding: 16px 30px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  text-decoration: none;
 }
 
 .titulo_com_linha {
@@ -269,12 +271,16 @@ p, body {
   display: flex; /*Coloca lado a lado*/
   align-items: center;
   gap: 20px;
-  padding: 280px 250px 280px 20px;
+  padding: 280px 250px 200px 20px;
 }
 
 #bloco_do_texto .texto {
   flex: 2;  /* Maior que a imagem */
   padding: 0px 350px 0px 200px ;
+}
+
+#ancora {
+  scroll-margin-top: 120px;
 }
 
 .texto h2 {
@@ -308,8 +314,32 @@ p, body {
   display: block;
 }
 
-h1 {
-  text-align: center;
+.borda_do_calculo {
+  max-width: 1300px;
+  margin: auto;
+  background-color: #6f86a3;
+  padding: 40px 40px 1px 40px;
+  border: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+}
+
+/*
+8ba6c7
+c2c6cc
+6f86a3
+5e6f82
+4b5a6b
+*/
+
+.borda_do_calculo h2 {
+  color: black;
+}
+
+#calculos {
+  color: black;
 }
 
 /* --- LAYOUT EM DUAS COLUNAS --- */
@@ -344,6 +374,7 @@ label {
   font-weight: bold;
   display: block;
   margin-top: 10px;
+  color: black;
 }
 
 input {
@@ -351,7 +382,7 @@ input {
   padding: 8px;
   margin-top: 5px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #acacac;
 }
 
 button {
@@ -366,7 +397,7 @@ button {
 }
 
 button:hover {
-  background-color: #004c99;
+  background-color: #003e7c;
 }
 
 table {
@@ -381,6 +412,10 @@ th, td {
   text-align: center;
 }
 
+td {
+  color: black;
+}
+
 th {
   background-color: #0066cc;
   color: white;
@@ -390,6 +425,11 @@ th {
   margin-top: 15px;
   font-weight: bold;
   text-align: right;
+}
+
+.dicas {
+  height: 1200px;
+  width: 100%;
 }
 
 #foto_parallax {
