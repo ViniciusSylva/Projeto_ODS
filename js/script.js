@@ -85,10 +85,18 @@ revealOnScroll();
     const corpo = document.querySelector("#tabela tbody");
     corpo.innerHTML = "";
     let total = 0;
+    let co2 = 0;
+    let arvore = -0;
 
     aparelhos.forEach(a => {
       const consumoDiario = a.quantidade * a.consumo * a.horas;
       total += consumoDiario;
+
+      const co2Gerado = consumoDiario * 0.054
+      co2 += co2Gerado
+
+      const conversaoArvore = co2Gerado / 22
+      arvore += conversaoArvore
 
       const linha = document.createElement("tr");
       linha.innerHTML = `
@@ -103,4 +111,10 @@ revealOnScroll();
 
     document.getElementById("resultado").innerHTML =
       `Consumo total diário: <strong>${total.toFixed(2)} kWh</strong>`;
+
+    document.getElementById("co2").innerHTML =
+      `O que equivale há: <strong>${co2.toFixed(2)} Kg de gás CO₂</strong>`;
+      
+    document.getElementById("arvore").innerHTML = 
+      `Você precisaria de aproximadamente <strong>${arvore.toFixed(2)} árvores para compensar esse CO₂</strong>`  
   }
