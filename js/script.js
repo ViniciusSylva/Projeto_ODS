@@ -92,10 +92,10 @@ revealOnScroll();
       const consumoDiario = a.quantidade * a.consumo * a.horas;
       total += consumoDiario;
 
-      const co2Gerado = consumoDiario * 0.054
+      const co2Gerado = consumoDiario * 0.10
       co2 += co2Gerado
 
-      const conversaoArvore = co2Gerado / 22
+      const conversaoArvore = co2Gerado / 0.06
       arvore += conversaoArvore
 
       const linha = document.createElement("tr");
